@@ -24,7 +24,7 @@ function validateForm() {
 			 alert("Text is not upto the length 2to60 Characters");
 			 return false;
 		  } else {
-			  return true;
+			 return true;
 		  }
 		  if (/[^0-9/]/.test(y)){
 			   alert("number is must");
