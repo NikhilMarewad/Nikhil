@@ -1,1 +1,120 @@
 /* Add styles for truYum application here */
+body{
+margin:0px;
+}
+.texts{
+	font-size:30px;
+	color:white;
+} 
+
+header{
+	padding:10px;
+	background-color:#2d4bba;	
+}
+footer{
+	margin-top:580px;
+	padding:10px;
+	background-color:#bfbaba;	
+}
+.foot{
+	margin-top:630px;
+}
+.foote{
+	margin-top:540px;
+}
+.footes{
+	margin-top:680px;
+}
+
+.imag{
+	margin-left:20px;
+	width:50px;
+	height:50px;
+}
+
+#txts1,#txts2{
+	float:right;
+	margin-right:50px;
+}
+#txtcolor{
+	color:white;
+}
+.tab{
+	text-align:right;
+	margin-left:50px;
+}
+.tright{
+	text-align:left;
+}
+.tcenter{
+	text-align:center;
+}
+.tleft{
+	
+text-align:left;
+}
+.spaces{
+	width:150px;
+}
+.tgap{
+	width:100px;
+	
+}
+.tgaps{
+	width:100px;
+	
+}
+.tprice{
+	text-align:right;
+}
+.tcat{
+	text-align:center;
+}
+#move{
+	margin-left:50px;
+}
+table a{
+	color:black;
+}
+.txtname{
+	width:520px;
+	border:solid black;
+}
+.txtno{
+	width:100px;
+	border:solid black;
+	text-align:right;
+}
+.txtdate{
+	border:solid black;
+}
+.tabsize{
+	width:100px;
+	border:solid black;
+}
+.radios{
+	width:100px;
+}
+.myform,.mytab{
+	margin-left:200px;
+}
+.btn{
+	width:150px;
+	height:50px;
+	color:white;
+	font-weight:bold;
+	background-color:#2d4bba;
+	border:1px solid #2d4bba;
+}
+::placeholder{
+	color:black;
+}
+.col{
+	color:green;
+}
+.myitm{
+	margin-left:350px;
+}
+.bldlet{
+	font-weight:bold;
+}
