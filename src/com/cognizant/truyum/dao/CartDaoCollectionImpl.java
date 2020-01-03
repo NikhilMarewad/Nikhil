@@ -39,17 +39,14 @@ public class CartDaoCollectionImpl implements CartDao {
 	}
 
 	@Override
-	public List<MenuItem> getAllCartItems(long userId) {
+	public List<MenuItem> getAllCartItems(long userId) throws CartEmptyException {
 		List<MenuItem> menuItemList = Usercart.get(userId).getMenuItemList();
 		Cart cart = Usercart.get(userId);
 		double total = 0.0;
 		if (cart == null || menuItemList.isEmpty()) {
-			try {
+			
 				throw new CartEmptyException();
-			} catch (CartEmptyException e) {
-
-				e.printStackTrace();
-			}
+			
 		} else {
 			for (MenuItem menuItem : menuItemList) {
 				total += menuItem.getPrice();
@@ -60,12 +57,16 @@ public class CartDaoCollectionImpl implements CartDao {
 	}
 
 	@Override
-	public void removeCartItem(long userId, long menuItemId) {
-		List<MenuItem> menuItem = new ArrayList<>();
-		//for (int i = 0; i < menuItem.size(); i++)
-		for(MenuItem menuitem:menuItem){
-			if (((MenuItem) menuItem).getId() == menuItemId) {
-				menuItem.remove(menuItem);
+	public void removeCartItem(long userId, long menuItemId) throws CartEmptyException {
+		List<MenuItem> menuItem = Usercart.get(userId).getMenuItemList();
+		if (menuItem.isEmpty()||menuItem==null) {
+			
+			throw new CartEmptyException();
+		
+	}
+		for(MenuItem m:menuItem){
+			if ( m.getId() == menuItemId) {
+				menuItem.remove(m);
 				break;
 			}
 
