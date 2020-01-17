@@ -24,6 +24,10 @@ public class MenuItem {
 		this.freeDelivery = freeDelivery;
 	}
 
+	public MenuItem() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -46,6 +50,10 @@ public class MenuItem {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public void setPrice(float price) {
+		this.price = price;
 	}
 
 	public Date getDatOfLaunch() {

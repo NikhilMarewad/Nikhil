@@ -56,8 +56,8 @@ select
  m.me_free_delivery,
  m.me_price,
  m.me_category 
- from menu_item m join cart c 
- on m.me_id=c.ct_pr_id;
+ from menu_item;
+ 
 
 --------------------------------------------------------------------------
 ----------- Showing Customer Total Price  --------------------------------
@@ -65,7 +65,7 @@ select
 select
  sum(m.me_price) Total
  from menu_item m join cart c 
- on m.me_id=c.ct_pr_id;
+ on m.me_id=c.ct_pr_id where ct_us_id=1;
 
 ---------------------------------------------------------------------------
 
