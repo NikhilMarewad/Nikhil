@@ -21,33 +21,24 @@ public class MenuItemDaoSqlImplTest {
 		{
 			System.out.println(e);
 		}
-		
-
 	}
-
-	
 	private static void testGetMenuItemListAdmin() {
 		MenuItemDao MenuitemDao = new MenuItemDaoSqlImpl();
 		MenuitemDao.getMenuItemListAdmin();
 		List<MenuItem> menuItemList = MenuitemDao.getMenuItemListAdmin();
 		for (MenuItem x : menuItemList) {
-			System.out.println(x);
-		
+			System.out.println(x);	
 	}
-
 }
-	
-	private static void testGetMenuItemListCustomer() {
+		private static void testGetMenuItemListCustomer() {
 		MenuItemDao menuItemDao1 = new MenuItemDaoSqlImpl();
 		menuItemDao1.getMenuItemListCustomer();
 		List<MenuItem> menuItemList1 =menuItemDao1 .getMenuItemListCustomer();
 		for (MenuItem x : menuItemList1) {
 			System.out.println(x);
-		}
-		
+		}	
 	}
-	
-	private static void testModifyMenuItem() throws ParseException {
+		private static void testModifyMenuItem() throws ParseException {
 		MenuItem menuItem=new MenuItem(1, "French Fries", 100.0f, true, DateUtil.convertToDate("28/07/2017"),"Starters", true);
 		MenuItemDao MenuitemDao = new MenuItemDaoSqlImpl();
 		MenuitemDao.ModifyItem(menuItem);

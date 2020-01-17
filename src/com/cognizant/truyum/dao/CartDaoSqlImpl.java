@@ -40,8 +40,7 @@ public class CartDaoSqlImpl implements CartDao {
 	@Override
 	public List<MenuItem> getAllCartItems(long userId) throws CartEmptyException {
 		Connection con = ConnectionHandler.getConnection();
-		List<MenuItem>menuItem=new ArrayList<>();
-		
+		List<MenuItem>menuItem=new ArrayList<>();	
 		Cart cart = new Cart();
 		String show="select "
 				+ "m.me_id,"
@@ -54,8 +53,7 @@ public class CartDaoSqlImpl implements CartDao {
 				+ " from menu_item m "
 				+ "inner join cart c "
 				+ "on m.me_id=c.ct_pr_id "
-				+ "where c.ct_us_id=?";
-		
+				+ "where c.ct_us_id=?";	
 		try {
 			PreparedStatement	ps = con.prepareStatement(show);
 			ps.setLong(1, userId);
@@ -69,8 +67,7 @@ public class CartDaoSqlImpl implements CartDao {
 				menu.setDatOfLaunch(rs.getDate("me_date_of_launch"));
 				menu.setCategory(rs.getString("me_category"));
 				menu.setFreeDelivery(rs.getString("me_free_delivery").equalsIgnoreCase("Yes"));
-				cart.getMenuItemList().add(menu);
-			
+				cart.getMenuItemList().add(menu);		
 			}  
 		} catch (SQLException e) {
 			System.out.println(e); 
